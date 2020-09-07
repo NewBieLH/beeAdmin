@@ -1,113 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="renderer" content="webkit">
-  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>{{.title}}</title>
-		<link rel="stylesheet" type="text/css" href="static/layui/css/layui.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/admin.css"/>
-	</head>
-	<body>
-		<div class="main-layout" id='main-layout'>
-			<!--侧边栏-->
-			<div class="main-layout-side">
-				<div class="m-logo">
-				</div>
-				<ul class="layui-nav layui-nav-tree" lay-filter="leftNav">
-				  <li class="layui-nav-item layui-nav-itemed">
-				    <a href="javascript:;"><i class="iconfont">&#xe607;</i>菜单管理</a>
-				    <dl class="layui-nav-child">
-				      <dd><a href="javascript:;" data-url="menu_admin" data-id='1' data-text="后台菜单"><span class="l-line"></span>后台菜单</a></dd>
-				      <dd><a href="javascript:;" data-url="menu_home" data-id='2' data-text="前台菜单"><span class="l-line"></span>前台菜单</a></dd>
-				    </dl>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe608;</i>内容管理</a>
-				    <dl class="layui-nav-child">
-				      <dd><a href="javascript:;" data-url="article_list" data-id='3' data-text="文章管理"><span class="l-line"></span>文章管理</a></dd>
-				      <dd><a href="javascript:;" data-url="danye_list" data-id='9' data-text="单页管理"><span class="l-line"></span>单页管理</a></dd>
-				    </dl>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe604;</i>推荐位管理</a>
-				  </li>
-				   <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe60c;</i>友情链接</a>
-				  </li>
-				   <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe60a;</i>RBAC</a>
-				    <dl class="layui-nav-child">
-					    <dd><a href="javascript:;" data-url="menu_admin" data-id='1' data-text="角色管理"><span class="l-line"></span>角色管理</a></dd>
-					    <dd><a href="javascript:;" data-url="menu_home" data-id='2' data-text="权限管理"><span class="l-line"></span>权限管理</a></dd>
-						<dd><a href="javascript:;" data-url="menu_home" data-id='3' data-text="用户管理"><span class="l-line"></span>用户管理</a></dd>
-				    </dl>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;" data-url="email.html" data-id='4' data-text="邮件系统"><i class="iconfont">&#xe603;</i>邮件系统</a>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe60d;</i>生成静态</a>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;"><i class="iconfont">&#xe600;</i>备份管理</a>
-				  </li>
-				  <li class="layui-nav-item">
-				    <a href="javascript:;" data-url="admin-info.html" data-id='5' data-text="个人信息"><i class="iconfont">&#xe606;</i>个人信息</a>
-				  </li>
-				  <li class="layui-nav-item">
-				  	<a href="javascript:;" data-url="system.html" data-id='6' data-text="系统设置"><i class="iconfont">&#xe60b;</i>系统设置</a>
-				  </li>
-				</ul>
-			</div>
-			<!--右侧内容-->
-			<div class="main-layout-container">
-				<!--头部-->
-				<div class="main-layout-header">
-					<div class="menu-btn" id="hideBtn">
-						<a href="javascript:;">
-							<span class="iconfont">&#xe60e;</span>
-						</a>
-					</div>
-					<ul class="layui-nav" lay-filter="rightNav">
-					  <li class="layui-nav-item"><a href="javascript:;" data-url="email.html" data-id='4' data-text="邮件系统"><i class="iconfont">&#xe603;</i></a></li>
-					  <li class="layui-nav-item">
-					    <a href="javascript:;" data-url="admin-info.html" data-id='5' data-text="个人信息">超级管理员</a>
-					  </li>
-					  <li class="layui-nav-item"><a href="javascript:;">退出</a></li>
-					</ul>
-				</div>
-				<!--主体内容-->
-				<div class="main-layout-body">
-					<!--tab 切换-->
-					<div class="layui-tab layui-tab-brief main-layout-tab" lay-filter="tab" lay-allowClose="true">
-					  <ul class="layui-tab-title">
-					    <li class="layui-this welcome">后台主页</li>
-					  </ul>
-					  <div class="layui-tab-content">
-					    <div class="layui-tab-item layui-show" style="background: #f5f5f5;">
-					    	<!--1-->
-					    	<iframe src="admin/welcome" width="100%" height="100%" name="iframe" scrolling="auto" class="iframe" framborder="0"></iframe>
-					    	<!--1end-->
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-			<!--遮罩-->
-			<div class="main-mask">
 
-			</div>
-		</div>
-		<script type="text/javascript">
-			var scope={
-				link:'admin/welcome'
-			}
-		</script>
-		<script src="static/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
 
-	</body>
+<!-- Mirrored from www.zi-han.net/theme/hplus/500.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:52 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>{{.title}}</title>
+    <meta name="keywords" content="{{.keywords}}">
+    <meta name="description" content="{{.description}}">
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/static/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/static/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+    <script src="/static/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/static/js/bootstrap.min.js?v=3.3.6"></script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+    <script src="/static/js/plugins/layer/layer.min.js"></script>
+    <script src="/static/js/content.min.js"></script>
+    <script src="/static/js/welcome.min.js"></script>
+    <script src="/static/js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="/static/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/static/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+</head>
+
+<body class="gray-bg">
+    <!--body-->
+    {{.LayoutContent}}
+</body>
+
 </html>
